@@ -1,0 +1,796 @@
+:root {
+  --black: #090908;
+  --black-soft: #11110f;
+  --graphite: #1a1a17;
+  --line: rgba(245, 239, 225, 0.14);
+  --line-strong: rgba(211, 176, 95, 0.34);
+  --ivory: #f8f4ea;
+  --muted: #c7c0b1;
+  --gold: #d3b05f;
+  --gold-soft: #f0d58a;
+  --emerald: #60766b;
+  --shadow: 0 28px 90px rgba(0, 0, 0, 0.38);
+  --radius: 8px;
+  --max: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--ivory);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 54px 54px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.42), transparent 78%);
+  z-index: -1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.brand-emblem {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.brand-logo {
+  width: 188px;
+  height: 52px;
+  border-radius: 6px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.brand strong,
+.brand small {
+  display: block;
+}
+
+.brand strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.brand small {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.footer-logo {
+  width: 238px;
+  height: 118px;
+}
+
+.header-cta,
+.btn {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  font-weight: 700;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease,
+    color 180ms ease;
+}
+
+.header-cta {
+  padding: 0 18px;
+  background: var(--ivory);
+  color: var(--black);
+  font-size: 14px;
+}
+
+.btn {
+  padding: 0 24px;
+  border: 1px solid transparent;
+  font-size: 15px;
+}
+
+.btn:hover,
+.header-cta:hover,
+.service-card:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+  color: #15110a;
+  box-shadow: 0 20px 50px rgba(211, 176, 95, 0.2);
+}
+
+.btn-ghost {
+  border-color: rgba(248, 244, 234, 0.28);
+  background: rgba(248, 244, 234, 0.06);
+  color: var(--ivory);
+}
+
+.btn-large {
+  min-height: 58px;
+  padding-inline: 34px;
+  font-size: 16px;
+}
+
+.section-dark {
+  background: var(--black);
+}
+
+.section-band {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, #11110f, #0c0c0b);
+}
+
+.hero {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  padding: 92px max(22px, calc((100vw - var(--max)) / 2)) 42px;
+  isolation: isolate;
+}
+
+.hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  background:
+    linear-gradient(90deg, rgba(9, 9, 8, 0.94) 0%, rgba(9, 9, 8, 0.76) 43%, rgba(9, 9, 8, 0.38) 100%),
+    url("assets/escritorio-assis-faria.png") center center / cover no-repeat;
+  filter: saturate(0.92) contrast(1.02);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(circle at 70% 28%, rgba(211, 176, 95, 0.18), transparent 28%),
+    linear-gradient(180deg, transparent 70%, var(--black) 100%);
+}
+
+.hero-content {
+  width: min(700px, 100%);
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  color: var(--gold-soft);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+h1 {
+  max-width: 680px;
+  margin-bottom: 20px;
+  font-size: clamp(43px, 5.6vw, 68px);
+  line-height: 1.02;
+}
+
+h2 {
+  margin-bottom: 18px;
+  font-size: clamp(32px, 4.8vw, 58px);
+  line-height: 1.05;
+}
+
+h3 {
+  color: var(--ivory);
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.hero-copy {
+  max-width: 590px;
+  margin-bottom: 26px;
+  color: var(--muted);
+  font-size: clamp(16px, 1.55vw, 19px);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.trust-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ivory);
+  font-size: 15px;
+}
+
+.check-icon {
+  display: grid;
+  width: 26px;
+  height: 26px;
+  place-items: center;
+  border: 1px solid rgba(211, 176, 95, 0.46);
+  border-radius: 50%;
+  color: var(--gold-soft);
+}
+
+.hero-metrics {
+  display: grid;
+  width: min(760px, 100%);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin-top: clamp(42px, 8vh, 94px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--line);
+}
+
+.hero-metrics div {
+  padding: 18px;
+  background: rgba(12, 12, 11, 0.72);
+  backdrop-filter: blur(14px);
+}
+
+.hero-metrics strong,
+.hero-metrics span {
+  display: block;
+}
+
+.hero-metrics strong {
+  color: var(--gold-soft);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.hero-metrics span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+section:not(.hero) {
+  padding: 104px max(22px, calc((100vw - var(--max)) / 2));
+  scroll-margin-top: 104px;
+}
+
+.section-intro {
+  max-width: 780px;
+  margin-bottom: 44px;
+}
+
+.section-intro p:not(.eyebrow),
+.about-copy p,
+.final-cta p {
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.impact-grid,
+.services-grid,
+.differentials-grid,
+.testimonial-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.impact-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.impact-item,
+.service-card,
+.testimonial-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025));
+  box-shadow: var(--shadow);
+}
+
+.impact-item {
+  padding: 26px;
+}
+
+.impact-item .icon,
+.service-icon {
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid var(--line-strong);
+  color: var(--gold-soft);
+}
+
+.impact-item .icon {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 24px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.impact-item p,
+.service-card p,
+.testimonial-card p {
+  color: var(--muted);
+}
+
+.services {
+  background:
+    linear-gradient(135deg, rgba(96, 118, 107, 0.18), transparent 34%),
+    var(--black);
+}
+
+.services-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.service-card {
+  min-height: 292px;
+  padding: 28px;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.service-card:hover {
+  border-color: var(--line-strong);
+  background: linear-gradient(180deg, rgba(211, 176, 95, 0.1), rgba(255, 255, 255, 0.035));
+}
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 26px;
+  border-radius: var(--radius);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 10px;
+  color: var(--gold-soft);
+  font-weight: 800;
+}
+
+.text-link::after {
+  content: "→";
+  margin-left: 8px;
+  transition: transform 180ms ease;
+}
+
+.text-link:hover::after {
+  transform: translateX(4px);
+}
+
+.featured-card {
+  grid-column: span 3;
+  min-height: auto;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: minmax(260px, 430px) minmax(0, 1fr);
+  gap: clamp(32px, 7vw, 92px);
+  align-items: center;
+}
+
+.about-image {
+  position: relative;
+}
+
+.about-image::before {
+  content: "";
+  position: absolute;
+  inset: 18px -18px -18px 18px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+}
+
+.about-image img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius);
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+.credibility-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.credibility-list span,
+.differentials-grid div {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(248, 244, 234, 0.045);
+}
+
+.credibility-list span {
+  padding: 14px;
+  color: var(--ivory);
+}
+
+.differentials-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.differentials-grid div {
+  display: flex;
+  min-height: 86px;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  color: var(--ivory);
+  font-weight: 700;
+}
+
+.differentials-grid span {
+  color: var(--gold-soft);
+}
+
+.testimonial-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.testimonial-card {
+  padding: 28px;
+}
+
+.stars {
+  margin-bottom: 18px;
+  color: var(--gold-soft);
+  letter-spacing: 0.08em;
+}
+
+.testimonial-card strong {
+  color: var(--ivory);
+}
+
+.faq {
+  background: var(--black);
+}
+
+.faq-list {
+  display: grid;
+  gap: 10px;
+}
+
+details {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(248, 244, 234, 0.04);
+}
+
+summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 22px 24px;
+  color: var(--ivory);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: "+";
+  float: right;
+  color: var(--gold-soft);
+}
+
+details[open] summary::after {
+  content: "−";
+}
+
+details p {
+  margin: 0;
+  padding: 0 24px 24px;
+  color: var(--muted);
+}
+
+.final-cta {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.final-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(9, 9, 8, 0.76), rgba(9, 9, 8, 0.94)),
+    url("assets/dra-thalita-assis.png") center 38% / cover no-repeat;
+  opacity: 0.42;
+}
+
+.final-cta-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.site-footer {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 34px;
+  padding: 58px max(22px, calc((100vw - var(--max)) / 2)) 36px;
+  border-top: 1px solid var(--line);
+  background: #070706;
+}
+
+.site-footer p,
+.site-footer span,
+.site-footer a {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.site-footer h2 {
+  margin-bottom: 12px;
+  color: var(--ivory);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.site-footer a,
+.site-footer span {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.footer-brand {
+  margin-bottom: 18px;
+}
+
+.legal {
+  grid-column: 1 / -1;
+  margin: 16px 0 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.floating-whatsapp {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 30;
+  display: inline-flex;
+  min-height: 56px;
+  align-items: center;
+  gap: 10px;
+  padding: 0 18px;
+  border: 1px solid rgba(248, 244, 234, 0.18);
+  border-radius: 999px;
+  background: #1f7a4d;
+  box-shadow: 0 18px 52px rgba(0, 0, 0, 0.34);
+  color: #fff;
+  font-size: 14px;
+}
+
+.floating-whatsapp .whatsapp-icon {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.floating-whatsapp svg {
+  width: 21px;
+  height: 21px;
+  fill: currentColor;
+}
+
+[data-reveal],
+.reveal-up {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 700ms ease,
+    transform 700ms ease;
+}
+
+[data-reveal].is-visible,
+.reveal-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 {
+  transition-delay: 120ms;
+}
+
+.delay-2 {
+  transition-delay: 220ms;
+}
+
+.delay-3 {
+  transition-delay: 320ms;
+}
+
+.delay-4 {
+  transition-delay: 420ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 960px) {
+  .hero-media {
+    background:
+      linear-gradient(180deg, rgba(9, 9, 8, 0.72) 0%, rgba(9, 9, 8, 0.94) 62%, var(--black) 100%),
+      url("assets/escritorio-assis-faria.png") center top / cover no-repeat;
+  }
+
+  .hero-content {
+    padding-top: 42vh;
+  }
+
+  .impact-grid,
+  .services-grid,
+  .differentials-grid,
+  .testimonial-grid,
+  .site-footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featured-card {
+    grid-column: span 2;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .brand-emblem {
+    width: 38px;
+    height: 38px;
+  }
+
+  .brand strong {
+    font-size: 15px;
+  }
+
+  .brand small {
+    font-size: 11px;
+  }
+
+  .header-cta {
+    min-height: 40px;
+    padding: 0 12px;
+  }
+
+  .hero {
+    padding-inline: 18px;
+  }
+
+  .hero-content {
+    padding-top: 39vh;
+  }
+
+  h1 {
+    font-size: 39px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .hero-actions,
+  .btn {
+    width: 100%;
+  }
+
+  .hero-metrics,
+  .impact-grid,
+  .services-grid,
+  .differentials-grid,
+  .testimonial-grid,
+  .credibility-list,
+  .site-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-card {
+    grid-column: auto;
+  }
+
+  section:not(.hero) {
+    padding: 78px 18px;
+  }
+
+  .service-card,
+  .impact-item,
+  .testimonial-card {
+    padding: 22px;
+  }
+
+  .about-image::before {
+    inset: 12px -10px -10px 12px;
+  }
+
+  .floating-whatsapp {
+    right: 14px;
+    bottom: 14px;
+    min-height: 52px;
+  }
+}
