@@ -322,8 +322,7 @@ section:not(.hero) {
 
 .impact-grid,
 .services-grid,
-.differentials-grid,
-.testimonial-grid {
+.differentials-grid {
   display: grid;
   gap: 16px;
 }
@@ -333,8 +332,7 @@ section:not(.hero) {
 }
 
 .impact-item,
-.service-card,
-.testimonial-card {
+.service-card {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025));
@@ -363,8 +361,7 @@ section:not(.hero) {
 }
 
 .impact-item p,
-.service-card p,
-.testimonial-card p {
+.service-card p {
   color: var(--muted);
 }
 
@@ -488,24 +485,6 @@ section:not(.hero) {
 
 .differentials-grid span {
   color: var(--gold-soft);
-}
-
-.testimonial-grid {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.testimonial-card {
-  padding: 28px;
-}
-
-.stars {
-  margin-bottom: 18px;
-  color: var(--gold-soft);
-  letter-spacing: 0.08em;
-}
-
-.testimonial-card strong {
-  color: var(--ivory);
 }
 
 .faq {
@@ -706,7 +685,6 @@ details p {
   .impact-grid,
   .services-grid,
   .differentials-grid,
-  .testimonial-grid,
   .site-footer {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -764,7 +742,6 @@ details p {
   .impact-grid,
   .services-grid,
   .differentials-grid,
-  .testimonial-grid,
   .credibility-list,
   .site-footer {
     grid-template-columns: 1fr;
@@ -779,8 +756,7 @@ details p {
   }
 
   .service-card,
-  .impact-item,
-  .testimonial-card {
+  .impact-item {
     padding: 22px;
   }
 
