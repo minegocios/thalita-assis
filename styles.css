@@ -632,6 +632,15 @@ details p {
   box-shadow: 0 18px 52px rgba(0, 0, 0, 0.34);
   color: #fff;
   font-size: 14px;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.js .floating-whatsapp.is-hidden {
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(12px);
 }
 
 .floating-whatsapp .whatsapp-icon {
@@ -741,7 +750,7 @@ details p {
   }
 
   .hero-content {
-    padding-top: 39vh;
+    padding-top: clamp(170px, 27svh, 236px);
   }
 
   h1 {

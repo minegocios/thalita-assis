@@ -27,9 +27,23 @@ if ("IntersectionObserver" in window) {
     { threshold: 0.18 }
   );
 
-  revealTargets.forEach((target) => revealObserver.observe(target));
+revealTargets.forEach((target) => revealObserver.observe(target));
 } else {
   revealTargets.forEach((target) => target.classList.add("is-visible"));
+}
+
+const floatingWhatsapp = document.querySelector(".floating-whatsapp");
+const hero = document.querySelector(".hero");
+
+if (floatingWhatsapp && hero && "IntersectionObserver" in window) {
+  const floatingWhatsappObserver = new IntersectionObserver(
+    ([entry]) => {
+      floatingWhatsapp.classList.toggle("is-hidden", entry.isIntersecting);
+    },
+    { threshold: 0.1 }
+  );
+
+  floatingWhatsappObserver.observe(hero);
 }
 
 document.querySelectorAll(".faq-list details").forEach((item) => {
