@@ -1,5 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="12" fill="#090908"/>
-  <path d="M13 48 29 12h5l17 36h-7l-4-9H24l-4 9h-7Zm14-15h10l-5-12-5 12Z" fill="#d3b05f"/>
-  <path d="M37 17h12c6 0 10 3 10 9 0 3.8-1.8 6.7-5.1 8.1L60 48h-8l-5.3-12H44v12h-7V17Zm7 6v7h4.6c2.2 0 3.5-1.3 3.5-3.5S50.8 23 48.6 23H44Z" fill="#f8f4ea"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="16.9334mm" height="16.9334mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 1693.34 1693.34"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil1 {fill:none;fill-rule:nonzero}
+    .fil0 {fill:#090908;fill-rule:nonzero}
+   ]]>
+  </style>
+   <clipPath id="id0" style="clip-rule:nonzero">
+    <path d="M317.5 0l1058.34 0c175.32,0 317.5,142.18 317.5,317.5l0 1058.34c0,175.31 -142.18,317.49 -317.5,317.49l-1058.34 0.01c-175.31,-0.01 -317.49,-142.19 -317.49,-317.51l-0.01 -1058.33c0.01,-175.32 142.19,-317.5 317.51,-317.5z"/>
+   </clipPath>
+    <clipPath id="id1">
+     <path d="M317.5 0l1058.34 0c175.32,0 317.5,142.18 317.5,317.5l0 1058.34c0,175.31 -142.18,317.49 -317.5,317.49l-1058.34 0.01c-175.31,-0.01 -317.49,-142.19 -317.49,-317.51l-0.01 -1058.33c0.01,-175.32 142.19,-317.5 317.51,-317.5l-0.01 0z"/>
+    </clipPath>
+    <clipPath id="id2">
+     <path d="M317.5 0l1058.34 0c175.32,0 317.5,142.18 317.5,317.5l0 1058.34c0,175.31 -142.18,317.49 -317.5,317.49l-1058.34 0.01c-175.31,-0.01 -317.49,-142.19 -317.49,-317.51l-0.01 -1058.33c0.01,-175.32 142.19,-317.5 317.51,-317.5z"/>
+    </clipPath>
+ </defs>
+ <g id="Camada_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path class="fil0" d="M317.5 0l1058.34 0c175.32,0 317.5,142.18 317.5,317.5l0 1058.34c0,175.31 -142.18,317.49 -317.5,317.49l-1058.34 0.01c-175.31,-0.01 -317.49,-142.19 -317.49,-317.51l-0.01 -1058.33c0.01,-175.32 142.19,-317.5 317.51,-317.5z"/>
+  <g style="clip-path:url(#id0)">
+   <g id="_1698665584144">
+   </g>
+   <g style="clip-path:url(#id1)">
+    <image id="LOGO_x0020_1.png" x="-1351.99" y="-822.6" width="4314.74" height="4314.74" xlink:href="favicon_Images\favicon_ImgID1.png"/>
+   </g>
+   <g style="clip-path:url(#id2)">
+   </g>
+  </g>
+  <path class="fil1" d="M317.5 0l1058.34 0c175.32,0 317.5,142.18 317.5,317.5l0 1058.34c0,175.31 -142.18,317.49 -317.5,317.49l-1058.34 0.01c-175.31,-0.01 -317.49,-142.19 -317.49,-317.51l-0.01 -1058.33c0.01,-175.32 142.19,-317.5 317.51,-317.5z"/>
+ </g>
 </svg>
