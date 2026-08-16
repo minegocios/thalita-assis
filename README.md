@@ -10,6 +10,10 @@ O domínio público configurado para o site é `https://assisfaria.com.br/`.
 - `assets/dra-thalita-assis.png`: foto real da Dra. Thalita.
 - `assets/assis-faria-logo-dark.png` e `assets/assis-faria-logo-light.png`: logos da marca.
 
+## Ícone ao instalar
+
+O site inclui favicon SVG, ícone para a tela inicial do iOS e o manifesto PWA para Android e navegadores desktop. Os PNGs em `assets/icons/` são derivados do mesmo desenho de `favicon.svg`; mantenha-os atualizados juntos caso a marca seja alterada.
+
 ## Deploy recomendado
 
 1. Suba estes arquivos para um repositório no GitHub.

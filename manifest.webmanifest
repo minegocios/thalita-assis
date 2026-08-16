@@ -1,0 +1,25 @@
+{
+  "id": "/",
+  "name": "Assis Faria Advocacia",
+  "short_name": "Assis Faria",
+  "description": "Atendimento jurídico em Direito Bancário para consumidores.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#090908",
+  "theme_color": "#090908",
+  "icons": [
+    {
+      "src": "assets/icons/assis-faria-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icons/assis-faria-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
