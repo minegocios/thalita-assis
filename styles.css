@@ -746,11 +746,31 @@ details p {
   }
 
   .hero {
+    min-height: auto;
     padding-inline: 18px;
+    padding-top: 0;
+  }
+
+  .hero-media {
+    position: relative;
+    inset: auto;
+    z-index: 0;
+    width: calc(100% + 36px);
+    aspect-ratio: 3 / 2;
+    margin-inline: -18px;
+    background:
+      linear-gradient(180deg, rgba(9, 9, 8, 0.08) 45%, rgba(9, 9, 8, 0.92) 100%),
+      url("assets/escritorio-assis-faria.png") center / cover no-repeat;
+  }
+
+  .hero-overlay {
+    display: none;
   }
 
   .hero-content {
-    padding-top: clamp(170px, 27svh, 236px);
+    position: relative;
+    z-index: 1;
+    padding-top: 32px;
   }
 
   h1 {
