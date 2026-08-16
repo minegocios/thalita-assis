@@ -757,6 +757,12 @@ details p {
     width: 100%;
   }
 
+  .text-link {
+    min-height: 44px;
+    align-items: center;
+    margin-top: 4px;
+  }
+
   .hero-metrics,
   .impact-grid,
   .services-grid,
@@ -800,5 +806,12 @@ details p {
 
   .site-footer {
     padding-bottom: 112px;
+  }
+
+  .site-footer a:not(.footer-brand) {
+    display: flex;
+    min-height: 44px;
+    align-items: center;
+    margin-bottom: 0;
   }
 }
