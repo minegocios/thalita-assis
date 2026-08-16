@@ -4,9 +4,9 @@ Site estático premium para captação de leads via WhatsApp em Direito Bancári
 
 ## Antes de publicar
 
-Troque os dados de placeholder:
+O domínio público configurado para o site é `https://assisfaria.com.br/`.
 
-- `index.html`: ajuste Instagram, endereço e domínio em `LegalService`.
+- `index.html`: mantenha `canonical`, `og:url`, `og:image` e a URL do JSON-LD alinhados a esse domínio caso ele mude.
 - `assets/dra-thalita-assis.png`: foto real da Dra. Thalita.
 - `assets/assis-faria-logo-dark.png` e `assets/assis-faria-logo-light.png`: logos da marca.
 
